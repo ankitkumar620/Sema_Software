@@ -1,40 +1,40 @@
-const body = document.body
-const slides = document.querySelectorAll('.slide')
-const leftBtn = document.getElementById('left')
-const rightBtn = document.getElementById('right')
+const body = document.body;
+const slides = document.querySelectorAll('.slide');
+const leftBtn = document.getElementById('left');
+const rightBtn = document.getElementById('right');
 
-let activeSlide = 0
+let activeSlide = 0;
 
 rightBtn.addEventListener('click', () => {
-  activeSlide++
-
-  if (activeSlide > slides.length - 1) {
-    activeSlide = 0
-  }
-
-  setBgToBody()
-  setActiveSlide()
-})
+  changeSlide(1);
+});
 
 leftBtn.addEventListener('click', () => {
-  activeSlide--
+  changeSlide(-1);
+});
 
-  if (activeSlide < 0) {
-    activeSlide = slides.length - 1
+function changeSlide(direction) {
+  activeSlide += direction;
+
+  if (activeSlide > slides.length - 1) {
+    activeSlide = 0;
+  } else if (activeSlide < 0) {
+    activeSlide = slides.length - 1;
   }
 
-  setBgToBody()
-  setActiveSlide()
-})
+  updateSlideAppearance();
+}
 
-setBgToBody()
+function updateSlideAppearance() {
+  setBgToBody();
+  setActiveSlide();
+}
 
 function setBgToBody() {
-  body.style.backgroundImage = slides[activeSlide].style.backgroundImage
+  body.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
 
 function setActiveSlide() {
-  slides.forEach((slide) => slide.classList.remove('active'))
-
-  slides[activeSlide].classList.add('active')
+  slides.forEach((slide) => slide.classList.remove('active'));
+  slides[activeSlide].classList.add('active');
 }

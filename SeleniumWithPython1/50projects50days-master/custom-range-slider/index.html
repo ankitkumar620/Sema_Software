@@ -4,7 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Custom Range Slider</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .range-container {
+        position: relative;
+        width: 300px;
+        margin-top: 20px;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: #e0e0e0;
+        outline: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #3498db;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+
+      label {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #555;
+        font-size: 18px;
+      }
+    </style>
+    <title>Enhanced Custom Range Slider</title>
   </head>
   <body>
     <h2>Custom Range Slider</h2>

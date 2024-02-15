@@ -77,10 +77,7 @@ nav ul a {
   position: relative;
   height: 30px;
   width: 30px;
-}
-
-.icon:focus {
-  outline: 0;
+  outline: 0; /* Added to remove default outline on focus */
 }
 
 .icon .line {

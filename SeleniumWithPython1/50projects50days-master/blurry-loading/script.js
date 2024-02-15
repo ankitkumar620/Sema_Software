@@ -1,23 +1,35 @@
-const loadText = document.querySelector('.loading-text')
-const bg = document.querySelector('.bg')
+const loadText = document.querySelector('.loading-text');
+const bg = document.querySelector('.bg');
 
-let load = 0
+let load = 0;
 
-let int = setInterval(blurring, 30)
-
+// Use requestAnimationFrame for smoother animations
 function blurring() {
-  load++
+  load++;
 
   if (load > 99) {
-    clearInterval(int)
+    return; // Don't proceed if already reached 100%
   }
 
-  loadText.innerText = `${load}%`
-  loadText.style.opacity = scale(load, 0, 100, 1, 0)
-  bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
+  // Update the loading text
+  loadText.innerText = `${load}%`;
+
+  // Calculate opacity and blur using the scale function
+  const opacityValue = scale(load, 0, 100, 1, 0);
+  const blurValue = scale(load, 0, 100, 30, 0);
+
+  // Apply styles
+  loadText.style.opacity = opacityValue;
+  bg.style.filter = `blur(${blurValue}px)`;
+
+  // Continue the animation
+  requestAnimationFrame(blurring);
 }
 
-// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+// Start the animation
+requestAnimationFrame(blurring);
+
+// Function to map a range of numbers to another range
+function scale(num, in_min, in_max, out_min, out_max) {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 }

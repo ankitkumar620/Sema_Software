@@ -31,8 +31,12 @@ input {
   background-color: darksalmon;
   border: none;
   text-align: center;
+  outline: none; /* Added to remove default focus outline */
 }
 
+/* Optional: Add a transition effect to the input */
+input:hover,
 input:focus {
-  outline: none;
+  background-color: #ff8c66;
+  transition: background-color 0.3s ease-in-out;
 }

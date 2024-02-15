@@ -1,23 +1,26 @@
-const buttons = document.querySelectorAll('.ripple')
+const buttons = document.querySelectorAll('.ripple');
 
 buttons.forEach(button => {
-    button.addEventListener('click', function (e) {
-        const x = e.pageX
-        const y = e.pageY
+    button.addEventListener('click', createRipple);
+});
 
-        const buttonTop = e.target.offsetTop
-        const buttonLeft = e.target.offsetLeft
+function createRipple(e) {
+    const x = e.pageX;
+    const y = e.pageY;
 
-        const xInside = x - buttonLeft
-        const yInside = y - buttonTop
+    const buttonRect = e.target.getBoundingClientRect();
 
-        const circle = document.createElement('span')
-        circle.classList.add('circle')
-        circle.style.top = yInside + 'px'
-        circle.style.left = xInside + 'px'
+    const xInside = x - buttonRect.left;
+    const yInside = y - buttonRect.top;
 
-        this.appendChild(circle)
+    const ripple = document.createElement('span');
+    ripple.classList.add('circle');
+    ripple.style.top = `${yInside}px`;
+    ripple.style.left = `${xInside}px`;
 
-        setTimeout(() => circle.remove(), 500)
-    })
-})
+    this.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 500);
+}

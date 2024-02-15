@@ -1,36 +1,32 @@
-const jokeEl = document.getElementById('joke')
-const jokeBtn = document.getElementById('jokeBtn')
+const jokeEl = document.getElementById('joke');
+const jokeBtn = document.getElementById('jokeBtn');
 
-jokeBtn.addEventListener('click', generateJoke)
+jokeBtn.addEventListener('click', generateJoke);
 
-generateJoke()
+generateJoke();
 
-// USING ASYNC/AWAIT
 async function generateJoke() {
-  const config = {
-    headers: {
-      Accept: 'application/json',
-    },
+  try {
+    // Show loading state
+    jokeEl.innerHTML = 'Loading...';
+    
+    const config = {
+      headers: {
+        Accept: 'application/json',
+      },
+    };
+
+    const res = await fetch('https://icanhazdadjoke.com', config);
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch joke');
+    }
+
+    const data = await res.json();
+
+    jokeEl.innerHTML = data.joke;
+  } catch (error) {
+    console.error('Error fetching joke:', error.message);
+    jokeEl.innerHTML = 'Failed to fetch joke. Please try again later.';
   }
-
-  const res = await fetch('https://icanhazdadjoke.com', config)
-
-  const data = await res.json()
-
-  jokeEl.innerHTML = data.joke
 }
-
-// USING .then()
-// function generateJoke() {
-//   const config = {
-//     headers: {
-//       Accept: 'application/json',
-//     },
-//   }
-
-//   fetch('https://icanhazdadjoke.com', config)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       jokeEl.innerHTML = data.joke
-//     })
-// }

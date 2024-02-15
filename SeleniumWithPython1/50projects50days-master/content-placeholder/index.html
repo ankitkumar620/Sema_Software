@@ -16,7 +16,98 @@
         </h3>
         <p class="card-excerpt" id="excerpt">
           &nbsp;
+          <span class="animated-bg animated-bg-text">&nbsp;</span><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .card {
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-header,
+      .card-title,
+      .card-excerpt,
+      .profile-img,
+      .author-info {
+        margin: 20px;
+      }
+
+      .animated-bg {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: gradient-animation 1.5s infinite;
+      }
+
+      .animated-bg-text {
+        height: 15px;
+        width: 80%;
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+    </style>
+    <title>Enhanced Content Placeholder</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header animated-bg" id="header">&nbsp;</div>
+
+      <div class="card-content">
+        <h3 class="card-title animated-bg animated-bg-text" id="title">
+          &nbsp;
+        </h3>
+        <p class="card-excerpt" id="excerpt">
+          &nbsp;
           <span class="animated-bg animated-bg-text">&nbsp;</span>
+          <span class="animated-bg animated-bg-text">&nbsp;</span>
+          <span class="animated-bg animated-bg-text">&nbsp;</span>
+        </p>
+        <div class="author">
+          <div class="profile-img animated-bg" id="profile_img">&nbsp;</div>
+          <div class="author-info">
+            <strong class="animated-bg animated-bg-text" id="name"
+              >&nbsp;</strong
+            >
+            <small class="animated-bg animated-bg-text" id="date">&nbsp;</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
           <span class="animated-bg animated-bg-text">&nbsp;</span>
           <span class="animated-bg animated-bg-text">&nbsp;</span>
         </p>

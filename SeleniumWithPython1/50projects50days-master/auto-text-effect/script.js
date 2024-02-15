@@ -1,22 +1,38 @@
-const textEl = document.getElementById('text')
-const speedEl = document.getElementById('speed')
-const text = 'We Love Programming!'
-let idx = 1
-let speed = 300 / speedEl.value
+const textEl = document.getElementById('text');
+const speedEl = document.getElementById('speed');
+const text = 'We Love Programming!';
+let idx = 0;
+let speed = calculateSpeed();
 
-writeText()
+writeText();
 
 function writeText() {
-    textEl.innerText = text.slice(0, idx)
+  textEl.innerText = text.slice(0, idx);
 
-    idx++
+  idx++;
 
-    if(idx > text.length) {
-        idx = 1
-    }
+  if (idx > text.length) {
+    idx = 0;
+  }
 
-    setTimeout(writeText, speed)
+  setTimeout(writeText, speed);
 }
 
+function calculateSpeed() {
+  return 300 / speedEl.value;
+}
 
-speedEl.addEventListener('input', (e) => speed = 300 / e.target.value)
+speedEl.addEventListener('input', () => {
+  speed = calculateSpeed();
+});
+
+// Optionally, you can add event listeners for better control
+// e.g., stop the animation when the user focuses on the text area
+textEl.addEventListener('focus', () => {
+  clearTimeout(timeoutId);
+});
+
+// Resume the animation when the user removes focus
+textEl.addEventListener('blur', () => {
+  writeText();
+});

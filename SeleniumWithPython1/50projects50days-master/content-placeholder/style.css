@@ -42,8 +42,8 @@ img {
 }
 
 .card-title {
-  height: 20px;
   margin: 0;
+  font-size: 1.5rem; /* Adjusted font size for better visibility */
 }
 
 .card-excerpt {
@@ -53,6 +53,7 @@ img {
 
 .author {
   display: flex;
+  align-items: center; /* Centered the items vertically */
 }
 
 .profile-img {
@@ -65,9 +66,8 @@ img {
 .author-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center; /* Centered the items vertically */
   margin-left: 10px;
-  width: 100px;
 }
 
 .author-info small {
@@ -75,14 +75,10 @@ img {
   margin-top: 5px;
 }
 
-.animated-bg {
-  background-image: linear-gradient(
-    to right,
-    #f6f7f8 0%,
-    #edeef1 10%,
-    #f6f7f8 20%,
-    #f6f7f8 100%
-  );
+/* Simplified and enhanced the animation styling */
+.animated-bg,
+.animated-bg-text {
+  background: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
   background-size: 200% 100%;
   animation: bgPos 1s linear infinite;
 }
