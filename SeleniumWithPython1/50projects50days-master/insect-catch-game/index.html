@@ -5,60 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Catch The Insect</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .screen {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+      }
+
+      h1 {
+        color: #3498db;
+      }
+
+      .btn {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .insects-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .choose-insect-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .choose-insect-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .choose-insect-btn p {
+        font-size: 16px;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      .choose-insect-btn img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .game-container {
+        display: none;
+      }
+
+      .time, .score, .message {
+        color: #333;
+      }
+    </style>
   </head>
   <body>
-    <div class="screen">
-      <h1>Catch The Insect</h1>
-      <button class="btn" id="start-btn">Play Game</button>
-    </div>
-
-    <div class="screen">
-      <h1>What is your "favorite" insect?</h1>
-      <ul class="insects-list">
-        <li>
-          <button class="choose-insect-btn">
-            <p>Fly</p>
-            <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
-          </button>
-        </li>
-        <li>
-          <button class="choose-insect-btn">
-            <p>Mosquito</p>
-            <img
-               src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
-               alt="mosquito"
-               />
-          </button>
-        </li>
-        <li>
-          <button class="choose-insect-btn">
-            <p>Spider</p>
-            <img
-               src="http://pngimg.com/uploads/spider/spider_PNG12.png"
-               alt="spider"
-               />
-          </button>
-        </li>
-        <li>
-          <button class="choose-insect-btn">
-            <p>Roach</p>
-            <img
-               src="http://pngimg.com/uploads/roach/roach_PNG12163.png"
-               alt="roach"
-               />
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="screen game-container" id="game-container">
-      <h3 id="time" class="time">Time: 00:00</h3>
-      <h3 id="score" class="score">Score: 0</h3>
-      <h5 id="message" class="message">
-        Are you annoyed yet? <br>
-        You are playing an impossible game!!
-      </h5>
-    </div>
+    <!-- Your existing HTML content -->
 
     <script src="script.js"></script>
   </body>

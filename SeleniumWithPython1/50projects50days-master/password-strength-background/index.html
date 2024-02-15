@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.11/tailwind.min.css"
-      integrity="sha512-KO1h5ynYuqsFuEicc7DmOQc+S9m2xiCKYlC3zcZCSEw0RGDsxcMnppRaMZnb0DdzTDPaW22ID/gAGCZ9i+RT/w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Password Strength Backround</title>
-  </head>
-  <body>
-    <div class="background" id="background"></div>
-    <div class="bg-white rounded p-10 text-center shadow-md">
-      <h1 class="text-3xl">Image Password Strength</h1>
-      <p class="text-sm text-gray-700">Change the password to see the effect</p>
-      <div class="my-4 text-left">
-        <label for="email" class="text-gray-900">Email:</label>
-        <input
-          type="text"
-          class="border block w-full p-2 mt-2 rounded"
-          id="email"
-          placeholder="Enter Email"
-        />
-      </div>
 
-      <div class="my-4 text-left">
-        <label for="email" class="text-gray-900">Password:</label>
-        <input
-          type="password"
-          class="border block w-full p-2 mt-2 rounded"
-          id="password"
-          placeholder="Enter Password"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    integrity="sha512-egzFtpf/3Ir8jm9e+H8z7MWSTp5ST6jO5Vi0tQY1nHPRbK/3tknEoNZm1gI3jFZHJ5Bqeu8j+br/5i8Wxv0vRQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Password Strength Background</title>
+</head>
 
-      <button
-        class="bg-black text-white py-2 mt-4 inline-block w-full rounded"
-        type="submit"
-      >
-        Submit
-      </button>
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+  <div class="background" id="background"></div>
+  <div class="bg-white rounded p-10 text-center shadow-md">
+    <h1 class="text-3xl font-bold mb-4">Password Strength Background</h1>
+    <p class="text-sm text-gray-700 mb-4">Change the password to see the effect</p>
+    <div class="my-4 text-left">
+      <label for="email" class="text-gray-900 block mb-2">Email:</label>
+      <input
+        type="text"
+        class="border p-2 w-full rounded focus:outline-none focus:border-gray-500"
+        id="email"
+        placeholder="Enter Email"
+      />
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <div class="my-4 text-left">
+      <label for="password" class="text-gray-900 block mb-2">Password:</label>
+      <input
+        type="password"
+        class="border p-2 w-full rounded focus:outline-none focus:border-gray-500"
+        id="password"
+        placeholder="Enter Password"
+      />
+    </div>
+
+    <button
+      class="bg-black text-white py-2 mt-4 inline-block w-full rounded hover:bg-gray-800 focus:outline-none focus:shadow-outline"
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>

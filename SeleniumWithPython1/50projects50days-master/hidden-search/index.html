@@ -6,6 +6,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>Hidden Search</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .search {
+        position: relative;
+      }
+
+      .input {
+        width: 200px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: width 0.3s ease-in-out;
+      }
+
+      .input:focus {
+        width: 300px;
+        outline: none;
+      }
+
+      .btn {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: -45px;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .btn:hover {
+        background-color: #267bb5;
+      }
+    </style>
   </head>
   <body>
     <div class="search">

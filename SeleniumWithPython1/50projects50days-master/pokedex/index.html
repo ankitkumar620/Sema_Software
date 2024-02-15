@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pokedex</title>
-  </head>
-  <body>
-    <h1>Pokedex</h1>
-    <div class="poke-container" id="poke-container"></div>
 
-    <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pokedex</title>
+</head>
+
+<body class="bg-gray-200 text-gray-800 font-sans">
+  <header class="text-center py-8 bg-blue-500 text-white">
+    <h1 class="text-4xl font-bold">Pokedex</h1>
+  </header>
+
+  <main class="container mx-auto my-8">
+    <div class="poke-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="poke-container"></div>
+  </main>
+
+  <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
+  <script src="script.js"></script>
+</body>
+
 </html>

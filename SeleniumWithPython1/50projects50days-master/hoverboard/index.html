@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Hoverboard</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        max-width: 600px;
+      }
+
+      .hover-item {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        background-color: #3498db;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .hover-item:hover {
+        transform: scale(1.05);
+      }
+
+      .hover-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+      }
+
+      .hover-content h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="container" id="container"></div>
