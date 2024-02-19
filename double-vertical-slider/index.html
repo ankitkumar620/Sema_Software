@@ -5,24 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Vertical Slider</title>
+  <title>Enhanced Vertical Slider</title>
+  <style>
+    /* Add your custom styles here or in an external CSS file */
+    .slider-container {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .left-slide,
+    .right-slide {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left-slide > div,
+    .right-slide > div {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .left-slide > div:nth-child(1) {
+      background-color: #FD3555;
+    }
+
+    .left-slide > div:nth-child(2) {
+      background-color: #2A86BA;
+    }
+
+    .left-slide > div:nth-child(3) {
+      background-color: #252E33;
+    }
+
+    .left-slide > div:nth-child(4) {
+      background-color: #FFB866;
+    }
+
+    .right-slide > div {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .action-buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .down-button,
+    .up-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div class="slider-container">
     <div class="left-slide">
-      <div style="background-color: #FD3555">
+      <div>
         <h1>Nature flower</h1>
         <p>all in pink</p>
       </div>
-      <div style="background-color: #2A86BA">
+      <div>
         <h1>Bluuue Sky</h1>
         <p>with its mountains</p>
       </div>
-      <div style="background-color: #252E33">
+      <div>
         <h1>Lonely castle</h1>
         <p>in the wilderness</p>
       </div>
-      <div style="background-color: #FFB866">
+      <div>
         <h1>Flying eagle</h1>
         <p>in the sunset</p>
       </div>
@@ -34,11 +100,10 @@
       <div style="background-image: url('https://images.unsplash.com/photo-1510942201312-84e7962f6dbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=da4ca7a78004349f1b63f257e50e4360&auto=format&fit=crop&w=1050&q=80')"></div>
     </div>
     <div class="action-buttons">
-      <button class="down-button">
-        <i class="fas fa-arrow-down"></i>
-      </button>
-      <!-- Add other buttons or controls as needed -->
+      <button class="up-button"><i class="fas fa-arrow-up"></i></button>
+      <button class="down-button"><i class="fas fa-arrow-down"></i></button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

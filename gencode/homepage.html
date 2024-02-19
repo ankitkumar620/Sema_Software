@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Homepage</title>
+</head>
+<body>
+  <h1>Welcome to Google</h1>
+  <dtml-var greetings>
+  <form action="search_results.dtml" method="get">
+    <input type="text" name="q" placeholder="Search Google">
+    <input type="submit" value="Google Search">
+    <input type="submit" value="I'm Feeling Lucky">
+  </form>
+  <dtml-comment>
+    Rest of the Google homepage content would go here
+  </dtml-comment>
+</body>
+</html>
