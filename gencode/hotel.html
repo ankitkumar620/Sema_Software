@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Booking Form</title>
+</head>
+<body>
+  <form action="booking.php" method="post">
+    <label for="checkin">Check-In Date:</label>
+    <input type="date" id="checkin" name="checkin">
+    <label for="checkout">Check-Out Date:</label>
+    <input type="date" id="checkout" name="checkout">
+    <label for="room">Room Type:</label>
+    <select id="room" name="room">
+      <option value="double">Double Room</option>
+      <option value="twin">Twin Room</option>
+      <option value="suite">Suite</option>
+    </select>
+    <input type="submit" value="Book Now">
+  </form>
+</body>
+</html>
